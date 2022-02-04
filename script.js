@@ -32,7 +32,8 @@ getDataNew(APIURL);
 async function getDataNew(url) {
   let resp = await fetch(url);
   let data = await resp.json();
-  console.log(data);
+
+  console.log(data.results);
   //Will use it later
   main.innerHTML = "";
   data.results.forEach((movie) => {
@@ -68,16 +69,15 @@ async function getDataNew(url) {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  
   const searchTerm = search.value;
   const test = SEARCHAPI + searchTerm;
-  console.log(test);
+  if(searchTerm != "") {
+    getDataNew(test);
+  }else{
+    getDataNew(APIURL);
+  }
   
-  // if (searchTerm) {
-   
-
-  //     search.value = "";
-  // }
-  getDataNew(test);
   
 });
 
