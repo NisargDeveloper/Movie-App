@@ -1,22 +1,3 @@
-// console.log("Lets make the movie app");
-// function getData() {
-//   fetch("https://api.github.com/users")
-// .then(response => {
-// 	return response.json();
-// })
-// .then(data => {
-//   console.log(data);
-// })
-// }
-
-// function printOn() {
-//   let header = document.getElementById("header");
-//   console.log(`This is the data inside the function 2 ${getData()}`)
-// }
-
-// printOn();
-
-//Lets go baby
 const APIURL =
     "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1";
 const IMGPATH = "https://image.tmdb.org/t/p/w1280";
